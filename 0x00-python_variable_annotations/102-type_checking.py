@@ -1,23 +1,12 @@
 #!/usr/bin/env python3
-"""Type Checking Update"""
+"""Type Checking"""
+
+from typing import List, Tuple
 
 
-from typing import Tuple, Union, List, Any
-
-
-def zoom_array(lst: Tuple, factor: Union[int, float] = 2) -> Tuple:
-    """Use mypy to validate the following piece of code
-    and apply any necessary changes.
-    """	
-    zoomed_in: List[Any] = [
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    zoomed_in: List = [
         item for item in lst
-        for i in range(int(factor))
+        for i in range(factor)
     ]
-    return tuple(zoomed_in)
-
-
-array = (12, 72, 91)
-
-zoom_2x = zoom_array(array)
-
-zoom_3x = zoom_array(array, 3.0)
+    return zoomed_in
