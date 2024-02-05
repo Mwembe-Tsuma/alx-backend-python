@@ -21,7 +21,7 @@ class TestAccessNestedMap(unittest.TestCase):
             path: Tuple[str],
             expected: Union[Dict, int],
             ) -> None:
-        """Tests `access_nested_map`'s output."""
+        """Tests access_nested_map results."""
         self.assertEqual(access_nested_map(nested_map, path), expected)
 
     @parameterized.expand([
