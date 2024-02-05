@@ -8,7 +8,6 @@ from client import GithubOrgClient
 
 class TestGithubOrgClient(unittest.TestCase):
     """Tests the GithubOrgClient class."""
-
     @parameterized.expand([
         ("google",),
         ("abc",),
