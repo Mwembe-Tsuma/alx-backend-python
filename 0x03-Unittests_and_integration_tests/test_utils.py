@@ -52,14 +52,8 @@ class TestMemoize(unittest.TestCase):
         @memoize
         def a_property(self):
             return self.a_method()
-
-    def test_memoize(self):
-        """Tests the memoization of a_property."""
-        test_instance = self.TestClass()
-
-        # Mocking a_method to ensure it's not called
-        with patch.object(TestClass, "a_method") as mockMethod:
+        with patch.object(TestClass, "a_method") as mock_a_method:
             test_class = TestClass()
             test_class.a_property
             test_class.a_property
-            mockMethod.assert_called_once
+            mock_a_method.assert_called_once
